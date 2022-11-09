@@ -20,3 +20,8 @@ Style/Documentation:
 
 Bundler/OrderedGems:
   Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
