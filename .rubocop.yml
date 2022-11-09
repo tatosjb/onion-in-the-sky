@@ -9,10 +9,14 @@ Style/FrozenStringLiteralComment:
     - 'Gemfile'
     - 'Guardfile'
     - 'Rakefile'
+    - 'spec/**/*'
 
 Metrics/BlockLength:
   Exclude:
     - 'Guardfile'
 
 Style/Documentation:
+  Enabled: false
+
+Bundler/OrderedGems:
   Enabled: false
