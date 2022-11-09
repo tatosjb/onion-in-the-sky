@@ -12,6 +12,7 @@ gem 'http', '~> 5.1'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'bootsnap', require: false
 gem 'redis-rails', '~> 5.0'
+gem 'haversine', '~> 0.3.2'
 # gem "rack-cors"
 
 group :development, :test do
@@ -19,6 +20,7 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'guard-rspec', require: false
   gem 'rspec-rails', '~> 6.0'
+  gem 'byebug'
   gem 'dotenv-rails'
 end
 
