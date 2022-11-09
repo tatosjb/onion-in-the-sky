@@ -1,0 +1,18 @@
+AllCops:
+  Exclude:
+    - 'Gemfile.lock'
+    - 'bin/*'
+
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - 'Gemfile'
+    - 'Gemfile'
+    - 'Guardfile'
+    - 'Rakefile'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Guardfile'
+
+Style/Documentation:
+  Enabled: false
