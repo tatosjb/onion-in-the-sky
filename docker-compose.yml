@@ -13,3 +13,5 @@ services:
     command: redis-server
     ports:
       - "6379:6379"
+    mem_limit: 30m
+    cpus: 0.5
