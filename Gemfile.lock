@@ -91,11 +91,6 @@ GEM
       dotenv (= 2.7.6)
       railties (>= 3.2)
     erubi (1.11.0)
-    factory_bot (6.2.1)
-      activesupport (>= 5.0.0)
-    factory_bot_rails (6.2.0)
-      factory_bot (~> 6.2.0)
-      railties (>= 5.0.0)
     ffi (1.15.5)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
@@ -172,7 +167,6 @@ GEM
     parallel (1.22.1)
     parser (3.1.2.1)
       ast (~> 2.4.1)
-    pg (1.4.4)
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -288,6 +282,7 @@ GEM
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
     spring (4.1.0)
+    sqlite3 (1.5.3-x86_64-linux)
     thor (1.2.1)
     timeout (0.3.0)
     tzinfo (2.0.5)
@@ -314,11 +309,9 @@ DEPENDENCIES
   byebug
   debug
   dotenv-rails
-  factory_bot_rails (~> 6.2)
   guard-rspec
   haversine (~> 0.3.2)
   http (~> 5.1)
-  pg (~> 1.1)
   puma (~> 5.0)
   rack-cors
   rails (~> 7.0.3, >= 7.0.3.1)
@@ -330,6 +323,7 @@ DEPENDENCIES
   sidekiq (~> 7.0)
   simplecov (~> 0.21.2)
   spring
+  sqlite3 (~> 1.4)
   tzinfo-data
   webmock (~> 3.18)
 

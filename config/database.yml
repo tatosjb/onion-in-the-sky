@@ -15,20 +15,15 @@
 # gem "pg"
 #
 default: &default
-  adapter: postgresql
+  adapter: sqlite3
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
-dev: &dev
-  <<: *default
-  host: localhost
-  username: postgres
-  password: postgres
 
 development:
-  <<: *dev
+  <<: *default
   database: onion_in_the_sky_development
 
   # The specified database role being used to connect to postgres.
@@ -62,7 +57,7 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *dev
+  <<: *default
   database: onion_in_the_sky_test
 
 # As with config/credentials.yml, you never want to store sensitive information,

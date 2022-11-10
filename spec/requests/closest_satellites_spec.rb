@@ -18,8 +18,7 @@ RSpec.describe 'ClosestSatellites', type: :request do
   end
 
   before do
-    allow(Rails.cache).to receive(:read).with('starlink').and_return(starlink_data)
-    allow(LoadDetailedStarlinkSatellitesAndOrbits).to receive(:call)
+    allow(LoadDetailedStarlinkSatellitesAndOrbits).to receive(:call).and_return(starlink_data)
   end
 
   describe 'GET /index' do
