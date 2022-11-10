@@ -14,6 +14,6 @@ class ClosestSatellitesController < ApplicationController
   private
 
   def permitted_params
-    params.permit(:latitude, :longitude, :number_of_satellites)
+    params.permit(:latitude, :longitude, :number_of_satellites, :channel)
   end
 end

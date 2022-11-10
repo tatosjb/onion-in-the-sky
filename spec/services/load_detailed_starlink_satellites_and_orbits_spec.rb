@@ -50,4 +50,11 @@ RSpec.describe LoadDetailedStarlinkSatellitesAndOrbits do
       expect(Rails.cache.read('starlink_updated_at')).to eql Time.zone.local(2021, 1, 1, 0, 0, 0)
     end
   end
+
+  it 'broadcasts to the channel if present' do
+    expect(ActionCable.server).to receive(:broadcast).with('channel_identifier',
+                                                           { satellites: response.deep_stringify_keys['docs'] })
+
+    described_class.call(channel_identifier: 'channel_identifier', latitude: 0, longitude: 0, number_of_satellites: 2)
+  end
 end
