@@ -37,8 +37,8 @@ RSpec.describe FindTheClosestsSatelites do
         expect(result).to eql [starlink_data.first]
       end
 
-      it 'returns 10 satellites when ther number of satelites is not set' do
-        result = described_class.call(latitude: 6, longitude: 6)
+      it 'returns 10 satellites when ther number of satelites is nil' do
+        result = described_class.call(latitude: 6, longitude: 6, number_of_satellites: nil)
 
         expect(result).to match_array starlink_data[1..10]
       end

@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 class FindTheClosestsSatelites < ApplicationService
-  def initialize(latitude:, longitude:, number_of_satellites: 10)
-    @latitude = latitude
-    @longitude = longitude
-    @number_of_satellites = number_of_satellites
+  def initialize(latitude:, longitude:, number_of_satellites: nil)
+    @latitude = latitude.to_f
+    @longitude = longitude.to_f
+    @number_of_satellites = (number_of_satellites.presence || 10).to_i
   end
 
   def call

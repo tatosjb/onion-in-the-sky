@@ -70,3 +70,5 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
+
+Rails.application.eager_load!
