@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## versions
 
-Things you may want to cover:
+ruby 2.7.6
+Rails 7.0.4
+Redis 6.2
 
-* Ruby version
+## How to run the project
 
-* System dependencies
+First, install the dependencies running `bundle install`
 
-* Configuration
+After that, take a look at the .env.sample file and copy it to a .env file `cp .env.sample .env`
+The Redis URL is referent to the docker-compose Redis, so if you use docker, it's a lot easier
 
-* Database creation
+And finally, run the project with `docker-compose up` -d (to raise the containers) and `bin/rails s`
 
-* Database initialization
+The project should be running now!
 
-* How to run the test suite
+The endpoint, just as an example:
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`http://localhost:3000/closest_satellites?latitude=-27.158150&logitude=-48.553669&number_of_satellites=20`
